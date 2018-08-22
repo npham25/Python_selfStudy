@@ -13,11 +13,9 @@ class Solution(object):
             return 0
         elif i == 0:
             return 1
+        """find the index of the space before the last word (j)"""
         else:
-            s = s[0:i]
-            
-"""find the index of the space before the last word (j)"""
-            j = len(s) - 1
+            j = i - 1
             while s[j] != ' ' and j >= 0:
                 j -= 1
                 
