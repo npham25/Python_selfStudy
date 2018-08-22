@@ -6,7 +6,7 @@ class Solution(object):
             return 0
  """delete space(s) in the end of String:"""      
         i = len(s) - 1       
-        while s[i] == ' ' and i >= 0:
+        while i >= 0 and s[i] == ' ':
             i -= 1
             
         if i == -1:
@@ -16,7 +16,7 @@ class Solution(object):
         """find the index of the space before the last word (j)"""
         else:
             j = i - 1
-            while s[j] != ' ' and j >= 0:
+            while j >= 0 and s[j] != ' ':
                 j -= 1
                 
             return i - j
