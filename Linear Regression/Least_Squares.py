@@ -1,5 +1,3 @@
-
-
 class LinearRegression(object):
 	def mean(self,d):  #d is a list
 		n = len(d)
@@ -101,8 +99,7 @@ class LinearRegression(object):
 		print("-----------------------------------------------------------------")
 
 ###################################################################################################################
-def main():
-	
+def main():	
 	data = open("path", "r")
 	x, Y = [], []
 	for line in data:
@@ -110,8 +107,6 @@ def main():
 		Y.append(float(line.strip().split(",")[0]))
 
 	model = LinearRegression()
-		
-
 	data.close()
 
 	print("%-5s%-15s%-15s" %('', 'Mean', 'Var'))
@@ -136,8 +131,6 @@ def main():
 	print("Predict Y for X = [20, 22, 24, 26, 28]")
 	print("Y = ", model.predict_Y([20, 22, 24, 26, 28], b[0], b[1]))
 	print()
-
-	print("Scatter plot")
 	
 main()
 		
